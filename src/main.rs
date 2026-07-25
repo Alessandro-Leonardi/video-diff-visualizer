@@ -35,8 +35,8 @@ fn compute_red_diff_mask(
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     // 1. Load two consecutive frame images from disk
-    let frame_a = image::open("frame_001.png")?.into_rgb8();
-    let frame_b = image::open("frame_002.png")?.into_rgb8();
+    let frame_a = image::open(r"./assets/bird-flying1.png")?.into_rgb8();
+    let frame_b = image::open(r"./assets/bird-flying2.png")?.into_rgb8();
 
     // Ensure frames match dimensions before processing
     if frame_a.dimensions() != frame_b.dimensions() {
