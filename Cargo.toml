@@ -5,3 +5,7 @@ edition = "2024"
 
 [dependencies]
 image = "0.25"
+ffmpeg-next = { version = "8.1.0", default-features = false, features = ["codec", "device", "filter", "format", "resampling", "software-scaling"] }
+
+[target.x86_64-pc-windows-gnu]
+linker = "C:\\msys64\\mingw64\\bin\\gcc.exe"

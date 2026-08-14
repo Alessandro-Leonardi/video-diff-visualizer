@@ -1,5 +1,8 @@
 use image::{ImageBuffer, Luma, RgbImage};
 
+use crate::utils::print_test;
+mod utils;
+
 /// Computes a binary mask based on the red-channel difference between two frames.
 ///
 /// - `prev`: The previous RGB frame buffer.
@@ -34,6 +37,7 @@ fn compute_red_diff_mask(
 }
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
+    print_test("Ai ai ai ai ai.");
     // 1. Load two consecutive frame images from disk
     let frame_a = image::open(r"./assets/bird-flying1.png")?.into_rgb8();
     let frame_b = image::open(r"./assets/bird-flying2.png")?.into_rgb8();
